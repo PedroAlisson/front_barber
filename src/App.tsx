@@ -2,12 +2,15 @@ import React from "react";
 import GlobalStyle from "./styles/global";
 import SingIn from "./pages/SingIn";
 //import SingUp from "./pages/SingUp";
-const App: React.FC = () => {
-  return (
-    <>
+
+import AppProvider from "./hooks/index";
+
+const App: React.FC = () => (
+  <>
+    <AppProvider>
       <SingIn />
-      <GlobalStyle />
-    </>
-  );
-};
+    </AppProvider>
+    <GlobalStyle />
+  </>
+);
 export default App;
